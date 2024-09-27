@@ -1,0 +1,19 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./backend_express
+      dockerfile: Dockerfile
+    ports:
+      - 4000:3333
+    volumes:
+      - ./backend_express:/app
+      
+  fontend:
+    build:
+      context: ./frontend_react
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend_react:/app

@@ -5,7 +5,7 @@ import { RootState } from "../store";
 
 const ProtectedRoute: React.FC = () => {
   const isAuthenticated = useSelector(
-    (state: RootState) => state.auth.isAuthenticated
+    (state: RootState) => state.auth.isAuthenticated // here auth is the register name of the slice in index.ts
   );
   const location = useLocation();
 

@@ -81,7 +81,7 @@ makefile
 Copy code
 Authorization: Bearer <your_jwt_token>
 3. Logout - /api/auth/logout
-Method: POST
+Method: GET
 Description: Simulates a logout.
 Testing the API
 Use Postman or any API client to test the endpoints.

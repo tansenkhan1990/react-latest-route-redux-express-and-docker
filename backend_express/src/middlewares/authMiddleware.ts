@@ -10,7 +10,7 @@ export const authenticateJWT = (req: Request, res: Response, next: NextFunction)
   const token = req.header('Authorization')?.split(' ')[1]; // Get token from Authorization header
 
   if (!token) {
-    res.status(401).json({ message: 'Access Denied. No token provided.' });
+    res.status(401).json({ message: 'No token provided.' });
     return;
   }
 

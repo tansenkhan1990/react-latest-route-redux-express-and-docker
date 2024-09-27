@@ -5,15 +5,21 @@ services:
       context: ./backend_express
       dockerfile: Dockerfile
     ports:
-      - 4000:3333
+      - "3333:3333"  # Map port 4000 on the host to 3333 in the container
     volumes:
       - ./backend_express:/app
-      
-  fontend:
+    environment:
+      - NODE_ENV=development  # Ensure environment is set
+    depends_on:
+      - frontend  # Optional: make sure backend starts after frontend (if necessary)
+
+  frontend:
     build:
       context: ./frontend_react
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - "3000:3000"  # React frontend runs on port 3000
     volumes:
       - ./frontend_react:/app
+    environment:
+      - NODE_ENV=development

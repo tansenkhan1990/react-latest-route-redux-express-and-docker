@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "typeRoots": ["./src/types", "./node_modules/@types"]  // Add the custom types folder here
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
